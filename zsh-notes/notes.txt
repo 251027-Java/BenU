@@ -1,0 +1,31 @@
+Sample notes file
+
+-rm -rf 
+rmdir
+touch
+cat
+more
+less
+ls
+mkdir
+mv
+cp
+.
+..
+/ root
+~ home
+pwd
+.md - markdown file
+
+new commit
+
+## GIT Notes
+
+more notes for git
+add message using -m flag with "message in quotations"
+git status to check stages files or folders
+git staging is where files are stored before a commit
+use git log to check commits and timestamps and author
+git init - creates an empty repo that is local
+git clone - clones a repo from a cloud provider
+
