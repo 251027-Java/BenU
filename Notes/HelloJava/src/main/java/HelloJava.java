@@ -31,27 +31,35 @@ public class HelloJava {
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your grade: ");
-        try {
-            double grade = scanner.nextDouble();
-            if (grade >= 0 && grade <= 100) {
-                if (grade >= 90) {
-                    IO.println("Grade: A");
-                } else if (grade >= 80) {
-                    IO.println("Grade: B");
-                } else if (grade >= 70) {
-                    IO.println("Grade: C");
-                } else if (grade >= 60) {
-                    IO.println("Grade: D");
+        while(true) {
+            try {
+                System.out.print("Enter your grade: ");
+                double grade = scanner.nextDouble();
+                if (grade >= 0 && grade <= 100) {
+                    if (grade >= 90) {
+                        IO.println("Grade: A");
+                        break;
+                    } else if (grade >= 80) {
+                        IO.println("Grade: B");
+                        break;
+                    } else if (grade >= 70) {
+                        IO.println("Grade: C");
+                        break;
+                    } else if (grade >= 60) {
+                        IO.println("Grade: D");
+                        break;
+                    } else {
+                        IO.println("Grade: F");
+                        break;
+                    }
                 } else {
-                    IO.println("Grade: F");
+                    IO.println("Grade can only be 0 - 100");
                 }
-            } else {
-                IO.println("Grade can only be 0 - 100");
+            } catch (Exception e) {
+                IO.println("Exception: " + e);
+                scanner.nextLine();
             }
-        } catch(Exception e) {
-            IO.println("Exception: " + e);
         }
+        scanner.close();
     }
-
 }
